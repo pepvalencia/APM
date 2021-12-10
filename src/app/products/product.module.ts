@@ -5,11 +5,13 @@ import { ConvertToSpacesPipe } from '../shared/convert-to-scpaces.pipe';
 import { RouterModule } from '@angular/router';
 import { ProductDetailGuard } from './product-detail.guard';
 import { SharedModule } from '../shared/shared.module';
+import { ConvertToDatePipe } from '../shared/convert-to-date.pipe';
 
 @NgModule({
   declarations: [
     ProductListComponent,
     ProductDetailComponent,
+    ConvertToDatePipe,
     ConvertToSpacesPipe
   ],
   imports: [

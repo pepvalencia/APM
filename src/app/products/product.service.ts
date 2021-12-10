@@ -9,7 +9,8 @@ import { IProduct } from "./product";
 })
 export class ProductService {
 
-  private productUrl = 'api/products/products.json';
+  //private productUrl = 'api/products/products.json';
+  private productUrl = 'http://localhost:8080/app/products/all';
 
   constructor(private http: HttpClient) { }
 
@@ -26,7 +27,7 @@ export class ProductService {
   getProduct(id: number): Observable < IProduct | undefined > {
   return this.getProducts()
     .pipe(
-      map((products: IProduct[]) => products.find(p => p.productId === id))
+      map((products: IProduct[]) => products.find(p => p.id === id))
     );
   }
 
